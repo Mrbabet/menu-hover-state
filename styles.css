@@ -1,0 +1,35 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #252839;
+}
+ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+ul li {
+  position: relative;
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  text-decoration: none;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1rem;
+  -webkit-text-stroke: 1px white;
+  font-size: 4rem;
+}
+ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  width: 0;
+  transform: translate(37.6px, -16px);
+  transition: 1s;
+}
